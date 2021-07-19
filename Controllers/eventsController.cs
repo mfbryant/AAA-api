@@ -33,21 +33,30 @@ namespace api.Controllers
         }
 
         // POST: api/events
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [EnableCors("AnotherPolicy")]
+        [HttpPost(Name = "PostEvent")]
+        public void Post([FromBody] Event value)
         {
+            IAddEvent saveEvent = new AddEvents();
+            saveEvent.AddEvent(value);
         }
 
         // PUT: api/events/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [EnableCors("AnotherPolicy")]
+        [HttpPut("{id}", Name = "PutEvent")]
+        public void Put(int id, [FromBody] Event value)
         {
+            IEditEvent editEvent = new EditEvents();
+            editEvent.EditEvent(value);
         }
 
         // DELETE: api/events/5
-        [HttpDelete("{id}")]
+        [EnableCors("AnotherPolicy")]
+        [HttpDelete("{id}", Name = "DeleteEvent")]
         public void Delete(int id)
         {
+            IDeleteEvent deleteEvent = new DeleteEvents();
+            deleteEvent.DeleteEvent(id);
         }
     }
 }
