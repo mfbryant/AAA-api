@@ -10,5 +10,9 @@ namespace api.models
         public string Location { get; set; }
         public string EventDeets { get; set; }
         public int OrgId { get; set; }
+        public bool EventDraft { get; set; }
+        public bool EventPending { get; set; }
+        public bool EventApproved { get; set; }
+        public int UserId { get; set; }
     }
 }

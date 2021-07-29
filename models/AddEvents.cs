@@ -12,7 +12,7 @@ namespace api.models
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"INSERT INTO events(eventName, startDate, endDate, location, eventDeets, orgId) VALUES(@eventName, @startDate, @endDate, @location, @eventDeets, @orgId)";
+            string stm = @"INSERT INTO events(eventName, startDate, endDate, location, eventDeets, orgId, eventDraft, eventPending, eventApproved, userId) VALUES(@eventName, @startDate, @endDate, @location, @eventDeets, @orgId, @eventDraft, @eventPending, @eventApproved, @userId)";
 
             using var cmd = new MySqlCommand(stm, con);
 
@@ -22,6 +22,10 @@ namespace api.models
             cmd.Parameters.AddWithValue("@location", value.Location);
             cmd.Parameters.AddWithValue("@eventDeets", value.EventDeets);
             cmd.Parameters.AddWithValue("@orgId", value.OrgId);
+            cmd.Parameters.AddWithValue("@eventDraft", value.EventDraft);
+            cmd.Parameters.AddWithValue("@eventPending", value.EventPending);
+            cmd.Parameters.AddWithValue("@eventApproved", value.EventApproved);
+            cmd.Parameters.AddWithValue("@userId", value.UserId);
 
             cmd.Prepare();
             cmd.ExecuteNonQuery();
