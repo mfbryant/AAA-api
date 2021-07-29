@@ -31,9 +31,9 @@ namespace api.models
                     Location = rdr["location"].ToString(),
                     EventDeets = rdr["eventDeets"].ToString(),
                     OrgId = int.Parse(rdr["orgId"].ToString()),
-                    EventDraft = bool.Parse(rdr["eventDraft"].ToString()),
-                    EventPending = bool.Parse(rdr["eventPending"].ToString()),
-                    EventApproved = bool.Parse(rdr["eventApproved"].ToString()),
+                    EventDraft = Boolean.Parse(rdr["eventDraft"].ToString()),
+                    EventPending = Boolean.Parse(rdr["eventPending"].ToString()),
+                    EventApproved = Boolean.Parse(rdr["eventApproved"].ToString()),
                     UserId = int.Parse(rdr["userId"].ToString()),
                 };
                 events.Add(e);
@@ -64,9 +64,9 @@ namespace api.models
                 Location = rdr["location"].ToString(),
                 EventDeets = rdr["eventDeets"].ToString(),
                 OrgId = int.Parse(rdr["orgId"].ToString()),
-                EventDraft = bool.Parse(rdr["eventDraft"].ToString()),
-                EventPending = bool.Parse(rdr["eventPending"].ToString()),
-                EventApproved = bool.Parse(rdr["eventApproved"].ToString()),
+                EventDraft = Boolean.Parse(rdr["eventDraft"].ToString()),
+                EventPending = Boolean.Parse(rdr["eventPending"].ToString()),
+                EventApproved = Boolean.Parse(rdr["eventApproved"].ToString()),
                 UserId = int.Parse(rdr["userId"].ToString()),
             };
         }

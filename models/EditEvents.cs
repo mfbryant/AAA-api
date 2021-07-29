@@ -1,5 +1,5 @@
 using MySql.Data.MySqlClient;
-using API.Models.Interfaces;
+using api.models.interfaces;
 
 namespace api.models
 {
