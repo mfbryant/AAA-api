@@ -9,5 +9,9 @@ namespace api.models
         public string Twitter { get; set; }
         public string LinkedIn { get; set; }
         public string Facebook { get; set; }
+        public string MissionStatement { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
+        public string President { get; set; }
     }
 }

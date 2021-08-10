@@ -31,6 +31,10 @@ namespace api.models
                     Twitter = rdr["twitter"].ToString(),
                     LinkedIn = rdr["linkedIn"].ToString(),
                     Facebook = rdr["facebook"].ToString(),
+                    MissionStatement = rdr["missionStatement"].ToString(),
+                    Email = rdr["email"].ToString(),
+                    Phone = rdr["phone"].ToString(),
+                    President = rdr["president"].ToString(),
                 };
                 orgs.Add(x);
             }
@@ -61,6 +65,10 @@ namespace api.models
                 Twitter = rdr["twitter"].ToString(),
                 LinkedIn = rdr["linkedIn"].ToString(),
                 Facebook = rdr["facebook"].ToString(),
+                MissionStatement = rdr["missionStatement"].ToString(),
+                Email = rdr["email"].ToString(),
+                Phone = rdr["phone"].ToString(),
+                President = rdr["president"].ToString(),
             };
         }
     }
