@@ -25,7 +25,7 @@ namespace api.Controllers
 
         // GET: api/events/5
         [EnableCors("AnotherPolicy")]
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "GetEvent")]
         public Event Get(int id)
         {
             IGetEvent readEvent = new ReadEvents();

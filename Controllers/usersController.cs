@@ -25,7 +25,7 @@ namespace api.Controllers
 
         // GET: api/users/5
         [EnableCors("AnotherPolicy")]
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "GetUser")]
         public User Get(int id)
         {
             IGetUser readUser = new ReadUsers();
