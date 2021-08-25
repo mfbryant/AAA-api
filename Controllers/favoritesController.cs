@@ -42,13 +42,13 @@ namespace api.Controllers
         }
 
         // PUT: api/favorites/5
-        [HttpPut("{id:int}")]
+        [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
         // DELETE: api/favorites/5
-        [HttpDelete("{id:int}")]
+        [HttpDelete]
         public void Delete(int id)
         {
         }
