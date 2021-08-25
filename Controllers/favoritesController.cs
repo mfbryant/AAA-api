@@ -25,7 +25,7 @@ namespace api.Controllers
 
         // GET: api/favorites/5
         [EnableCors("AnotherPolicy")]
-        [HttpGet("{id:int}", Name = "GetFavorite")]
+        [HttpGet("{id}", Name = "GetFavorite")]
         public Favorite Get(int id)
         {
             IGetFavorite readFavs = new ReadFavorites();
@@ -48,7 +48,7 @@ namespace api.Controllers
         }
 
         // DELETE: api/favorites/5
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public void Delete(int id)
         {
         }
