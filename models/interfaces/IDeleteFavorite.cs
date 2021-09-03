@@ -1,7 +1,7 @@
 namespace api.models.interfaces
 {
-    public class IDeleteFavorite
+    public interface IDeleteFavorite
     {
-        void DeleteFavorite(int id);
+        public void DeleteFavorite(int id);
     }
 }

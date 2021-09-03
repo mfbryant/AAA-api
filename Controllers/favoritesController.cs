@@ -49,12 +49,13 @@ namespace api.Controllers
         }
 
         // DELETE: api/favorites/5
-        [EnableCors("AnotherPolicy")]
-        [HttpDelete("{id}", Name = "DeleteFavorite")]
-        public void Delete(int id)
+        // [EnableCors("AnotherPolicy")]
+        [HttpDelete]
+        public void Delete([FromBody] Favorite fav)
         {
+            int favId = fav.FavoriteId;
             IDeleteFavorite deleteFavorite = new DeleteFavorites();
-            deleteFavorite.DeleteFavorite(id);
+            deleteFavorite.DeleteFavorite(favId);
         }
     }
 }
