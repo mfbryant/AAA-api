@@ -1,4 +1,4 @@
-namespace AAA_api.models.interfaces
+namespace api.models.interfaces
 {
     public class IDeleteFavorite
     {

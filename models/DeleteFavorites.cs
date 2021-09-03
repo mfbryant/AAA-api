@@ -1,7 +1,7 @@
 using MySql.Data.MySqlClient;
 using api.models.interfaces;
 
-namespace AAA_api.models
+namespace api.models
 {
     public class DeleteFavorites : IDeleteFavorite
     {
