@@ -42,15 +42,19 @@ namespace api.Controllers
         }
 
         // PUT: api/favorites/5
-        [HttpPut("{id}")]
+        [EnableCors("AnotherPolicy")]
+        [HttpPut("{id}", Name = "PutFavorite")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
         // DELETE: api/favorites/5
-        [HttpDelete("{id}")]
+        [EnableCors("AnotherPolicy")]
+        [HttpDelete("{id}", Name = "DeleteFavorite")]
         public void Delete(int id)
         {
+            IDeleteFavorite deleteFavorite = new DeleteFavorites();
+            deleteFavorite.DeleteFavorite(id);
         }
     }
 }
