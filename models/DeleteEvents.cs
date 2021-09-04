@@ -5,7 +5,7 @@ namespace api.models
 {
     public class DeleteEvents : IDeleteEvent
     {
-        public void DeleteEvent(int id)
+        void IDeleteEvent.DeleteEvent(int id)
         {
             ConnectionString myConnection = new ConnectionString();
             string cs = myConnection.cs;
